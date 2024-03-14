@@ -6,12 +6,12 @@ name: Deploy to Amazon ECS
 
 env:
   ENV: prod
-  ECS_SERVICE: backend
-  ECS_CLUSTER: prod
-  ECS_TASK_DEFINITION: backend
-  ECR_REPOSITORY: backend
-  CONTAINER_NAME: backend
-  REGION: eu-north-1
+  ECS_SERVICE: ByteMeChatBackend
+  ECS_CLUSTER: ByteMeChatBackend
+  ECS_TASK_DEFINITION: Byte-Me-Chat-Backend-Main
+  ECR_REPOSITORY: byte-me-chat-backend-main
+  CONTAINER_NAME: byte-me-chat-backend
+  REGION: eu-central-1
 
 jobs:
   deploy:
