@@ -11,4 +11,5 @@ while IFS=: read -r key value; do
 done
 
 sed -i "s|%ECS_TASK_DEFINITION%|$ECS_TASK_DEFINITION|g" ecs-task-definition.json
+sed -i "s|%REGION%|$REGION|g" ecs-task-definition.json
 sed -i "s|%CONTAINER_NAME%|$CONTAINER_NAME|g" ecs-task-definition.json
