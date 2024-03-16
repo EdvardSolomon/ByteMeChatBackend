@@ -5,8 +5,8 @@ on:
 name: Deploy to Amazon ECS
 
 env:
-  ECS_SERVICE: ByteMeChatBackend
-  ECS_CLUSTER: ByteMeChatBackend
+  ECS_SERVICE: ByteMeChatService
+  ECS_CLUSTER: ByteMeChatCluster
   ECS_TASK_DEFINITION: Byte-Me-Chat-Backend-Main
   ECR_REPOSITORY: byte-me-chat-backend-main
   CONTAINER_NAME: byte-me-chat-backend
