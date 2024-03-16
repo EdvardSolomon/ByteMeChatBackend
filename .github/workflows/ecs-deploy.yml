@@ -38,9 +38,9 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: latest
         run: |
-          docker build -t byte-me-chat-backend . 
-          docker tag byte-me-chat-backend:latest 031525572722.dkr.ecr.eu-central-1.amazonaws.com/byte-me-chat-backend-main:latest
-          docker push 031525572722.dkr.ecr.eu-central-1.amazonaws.com/byte-me-chat-backend-main:latest
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . 
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
       - name: Build task definition
         run: bash ./scripts/github/artifact-build-deploy-prod.sh
