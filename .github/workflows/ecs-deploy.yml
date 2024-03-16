@@ -11,6 +11,11 @@ env:
   ECR_REPOSITORY: byte-me-chat-backend-main
   CONTAINER_NAME: byte-me-chat-backend
   REGION: eu-central-1
+  DB_NAME: ${{ secrets.DB_NAME }}
+  DB_HOST: ${{ secrets.DB_HOST }}
+  DB_PORT: ${{ secrets.DB_PORT }}
+  DB_USER: ${{ secrets.DB_USER }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
 jobs:
   deploy:
